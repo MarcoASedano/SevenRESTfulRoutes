@@ -1,0 +1,11 @@
+html, body {
+  height: 100%;
+}
+
+.dark-mode {
+  background-color: rgba(0,0,0,.9);
+}
+
+#light-row td {
+  border-color: rgba(0,0,0,.2);
+}

@@ -8,6 +8,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $("#dark-mode").click(function() {
+          $("body").toggleClass("dark-mode");
+        });
+      });
+    </script>
+
     <title>The Seven RESTful Routes</title>
   </head>
   <body>
@@ -18,13 +29,14 @@
           <div class="jumbotron mt-4">
             <h1 class="display-4">The Seven RESTful Routes</h1>
             <p class="lead">A common pattern to satisfy the CRUD operations in your app using seven RESTful routes.</p>
-            <a class="btn btn-primary btn-sm" href="https://medium.com/adventures-in-code/snow-white-the-7-restful-routes-afcf87bbe5bd" role="button">Learn more</a>
+            <a class="btn btn-primary" href="https://medium.com/adventures-in-code/snow-white-the-7-restful-routes-afcf87bbe5bd" role="button">Learn more</a>
+            <button id="dark-mode" type="button" class="float-right btn btn-dark">Dark Mode</button>
           </div>
         </div>
       </div>
 
       <div class="row">
-        <table class="table table-bordered">
+        <table class="table table-bordered ">
           <thead>
             <tr class="table-secondary">
               <th scope="col">Name</th>
@@ -35,7 +47,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr id="light-row" class="table-light" style="border-color: gray">
               <td>Index</td>
               <td>/workers</td>
               <td>GET</td>
@@ -88,10 +100,6 @@
         </table>
       </div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> -->
+
   </body>
 </html>
