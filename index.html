@@ -17,11 +17,75 @@
         <div class="col-12">
           <div class="jumbotron mt-4">
             <h1 class="display-4">The Seven RESTful Routes</h1>
-            <hr class="my-4">
-            <p>A common pattern to satisfy the CRUD operations in your app using seven RESTful routes.</p>
-            <a class="btn btn-primary btn-sm mt-2" href="#" role="button">Learn more</a>
+            <p class="lead">A common pattern to satisfy the CRUD operations in your app using seven RESTful routes.</p>
+            <a class="btn btn-primary btn-sm" href="https://medium.com/adventures-in-code/snow-white-the-7-restful-routes-afcf87bbe5bd" role="button">Learn more</a>
           </div>
         </div>
+      </div>
+
+      <div class="row">
+        <table class="table table-bordered">
+          <thead>
+            <tr class="table-secondary">
+              <th scope="col">Name</th>
+              <th scope="col">Path</th>
+              <th scope="col">HTTP Verb</th>
+              <th scope="col">Purpose</th>
+              <th scope="col">Mongoose Method</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Index</td>
+              <td>/workers</td>
+              <td>GET</td>
+              <td>List all workers</td>
+              <td><code>Worker.find()</code></td>
+            </tr>
+            <tr class="table-success">
+              <td>New</td>
+              <td>/workers/new</td>
+              <td>GET</td>
+              <td>Show new worker form</td>
+              <td>N/A (No database call)</td>
+            </tr>
+            <tr class="table-success">
+              <td>Create</td>
+              <td>/workers</td>
+              <td>POST</td>
+              <td>Add a new worker, then redirect somewhere</td>
+              <td><code>Worker.create()</code></td>
+            </tr>
+            <tr class="table-primary">
+              <td>Show</td>
+              <td>/workers/:id</td>
+              <td>GET</td>
+              <td>Show info about one specific worker</td>
+              <td><code>Worker.findById()</code></td>
+            </tr>
+            <tr class="table-warning">
+              <td>Edit</td>
+              <td>/workers/:id/edit</td>
+              <td>GET</td>
+              <td>Show edit form for one worker</td>
+              <td><code>Worker.findById()</code></td>
+            </tr>
+            <tr class="table-warning">
+              <td>Update</td>
+              <td>/workers/:id</td>
+              <td>PUT</td>
+              <td>Update a particular worker, then redirect somewhere</td>
+              <td><code>Worker.findByIdAndUpdate()</code></td>
+            </tr>
+            <tr class="table-danger">
+              <td>Delete</td>
+              <td>/workers/:id</td>
+              <td>DELETE</td>
+              <td>Delete a particular worker, then redirect somewhere</td>
+              <td><code>Worker.findByIDAndRemove()</code></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
     <!-- Optional JavaScript -->
